@@ -1,8 +1,9 @@
 import swaggerJsdoc from "swagger-jsdoc";
 import { SwaggerDefinition } from "swagger-jsdoc";
+import config from "./config"
 
 const swaggerDefinition: SwaggerDefinition = {
-  openapi: "3.0.0",
+  openapi: "3.1.0",
   info: {
     title: "BoilerPlate Express API with Swagger",
     version: "1.0.0",
@@ -11,7 +12,7 @@ const swaggerDefinition: SwaggerDefinition = {
   },
   servers: [
     {
-      url: "http://localhost:8000/",
+      url: config.port,
       description: "Local server",
     },
     {
